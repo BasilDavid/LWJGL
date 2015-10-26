@@ -69,8 +69,10 @@ public class Sphere {
     
     public void draw(){
         GL11.glPushMatrix();
-        GL11.glEnable(GL11.GL_TEXTURE_2D);
-        tex.bind();
+        if (tex != null){
+            GL11.glEnable(GL11.GL_TEXTURE_2D);
+            tex.bind();
+        }
         for (int i=0; i<90; i++){
             for(int j=0; j<360; j++){
 //Coloring with gray scale
