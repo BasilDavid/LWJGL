@@ -81,23 +81,23 @@ public class Sphere {
 //                        glColor3f(1, 0, 0);
                 glBegin(GL_QUADS);
                     glTexCoord2f(j/360.0f, (90-i+1)/180.0f);
-                    glVertex3f((float) sphere[i][j][0], (float) sphere[i][j][1], (float) sphere[i][j][2]);
+                    glVertex3f(sphere[i][j][0], sphere[i][j][1], sphere[i][j][2]);
                     glTexCoord2f((j+1)/360.0f, (90-i+1)/180.0f);
-                    glVertex3f((float) sphere[i][j+1][0], (float) sphere[i][j+1][1], (float) sphere[i][j+1][2]);
+                    glVertex3f(sphere[i][j+1][0], sphere[i][j+1][1], sphere[i][j+1][2]);
                     glTexCoord2f((j+1)/360.0f, (90-i)/180.0f);
-                    glVertex3f((float) sphere[i+1][j+1][0], (float) sphere[i+1][j+1][1], (float) sphere[i+1][j+1][2]);
+                    glVertex3f(sphere[i+1][j+1][0], sphere[i+1][j+1][1], sphere[i+1][j+1][2]);
                     glTexCoord2f(j/360.0f, (90-i)/180.0f);
-                    glVertex3f((float) sphere[i+1][j][0], (float) sphere[i+1][j][1], (float) sphere[i+1][j][2]);
+                    glVertex3f(sphere[i+1][j][0], sphere[i+1][j][1], sphere[i+1][j][2]);
                 glEnd();
                 glBegin(GL_QUADS);
                     glTexCoord2f(j/360.0f, 0.5f+(i/180.0f));
-                    glVertex3f((float) sphere[i][j][0], -(float) sphere[i][j][1], (float) sphere[i][j][2]);
+                    glVertex3f(sphere[i][j][0], -sphere[i][j][1], sphere[i][j][2]);
                     glTexCoord2f((j+1)/360.0f, 0.5f+(i/180.0f));
-                    glVertex3f((float) sphere[i][j+1][0], -(float) sphere[i][j+1][1], (float) sphere[i][j+1][2]);
+                    glVertex3f(sphere[i][j+1][0], -sphere[i][j+1][1], sphere[i][j+1][2]);
                     glTexCoord2f((j+1)/360.0f, 0.5f+((i+1)/180.0f));
-                    glVertex3f((float) sphere[i+1][j+1][0], -(float) sphere[i+1][j+1][1], (float) sphere[i+1][j+1][2]);
+                    glVertex3f(sphere[i+1][j+1][0], -sphere[i+1][j+1][1], sphere[i+1][j+1][2]);
                     glTexCoord2f(j/360.0f, 0.5f+((i+1)/180.0f));
-                    glVertex3f((float) sphere[i+1][j][0], -(float) sphere[i+1][j][1], (float) sphere[i+1][j][2]);
+                    glVertex3f(sphere[i+1][j][0], -sphere[i+1][j][1], sphere[i+1][j][2]);
                 glEnd();
             }
         }
